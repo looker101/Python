@@ -36,8 +36,8 @@ try:
             return compare
         
     # crezione della variabile "path" a cui assegno il percordo per aprire il file
-    path_negozi = r"C:\Users\miche\Documents\GitHub\Off_White\Negozi.xlsx"
-    path_shopify = r"C:\Users\miche\Documents\GitHub\Off_White\Shopify.xlsx"
+    path_negozi = r"C:\Users\miche\Desktop\py\Progetti\off_white\Negozi.xlsx"
+    path_shopify = r"C:\Users\miche\Desktop\py\Progetti\off_white\Shopify.xlsx"
 
     neg = Off_White(path_negozi, path_shopify)
 
