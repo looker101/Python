@@ -27,7 +27,7 @@ try:
     # compitlo le celle vuote della colonna "Template Suffix"
     dolce_gabbana["Template Suffix"] = dolce_gabbana["Template Suffix"].fillna("Default product")
 
-    #salvataggio
+    # salvataggio
     directory = r"C:\Users\miche\Desktop\py\Progetti\BrandScraping\test_brand2\ok\\"
 
     salva = directory + 'dolce_gabbana_ok.xlsx'
