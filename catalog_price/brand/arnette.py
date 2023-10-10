@@ -6,7 +6,7 @@ try:
     arnette = pd.read_excel("arnette.xlsx")
 
     # definisco la funzione per lo sconto
-    def bale(x):
+    def an(x):
         return round(x * 0.7)
 
     # tutti i valori della colonna "Variant Price" li trasfrormo in float64
@@ -16,7 +16,7 @@ try:
     arnette[["Variant Price", "Variant Compare At Price"]] = arnette[["Variant Price", "Variant Compare At Price"]].fillna(0)
 
     # applico la funzione dello sconto alla colonna del "Compare Price" e compilo la colonna "Variant Price"
-    arnette["Variant Price"] = arnette["Variant Compare At Price"].apply(bale)
+    arnette["Variant Price"] = arnette["Variant Compare At Price"].apply(an)
 
     # funzione > o < di 200
     def arrotondamento(x):
