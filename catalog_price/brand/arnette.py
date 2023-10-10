@@ -1,24 +1,22 @@
-# SENZA BARRA
+# CON BARRA
 import pandas as pd
 try:
-    # leggi il file
+
+    # leggo il file
     arnette = pd.read_excel("arnette.xlsx")
 
     # definisco la funzione per lo sconto
-    def originals(x):
+    def bale(x):
         return round(x * 0.7)
 
-    #conversione interi in flot
+    # tutti i valori della colonna "Variant Price" li trasfrormo in float64
     arnette["Variant Price"] = arnette["Variant Price"].astype("float64")
 
     # compilo con il valore 0 tutti i NaN della colonna del "Compare at Price"
-    arnette[["Variant Price" ,"Variant Compare At Price"]] = arnette[["Variant Price" ,"Variant Compare At Price"]].fillna(0)
+    arnette[["Variant Price", "Variant Compare At Price"]] = arnette[["Variant Price", "Variant Compare At Price"]].fillna(0)
 
     # applico la funzione dello sconto alla colonna del "Compare Price" e compilo la colonna "Variant Price"
-    arnette["Variant Price"] = arnette["Variant Compare At Price"].apply(originals)
-
-    # tutte le celle della colonna "Compare at price" saranno vuote (in modo da non mostrare la barra)
-    arnette["Variant Compare At Price"] = ' '
+    arnette["Variant Price"] = arnette["Variant Compare At Price"].apply(bale)
 
     # funzione > o < di 200
     def arrotondamento(x):
@@ -29,20 +27,20 @@ try:
 
     arnette["Variant Price"] = arnette["Variant Price"].apply(arrotondamento)
 
-    # compilo tutte le celle vuote della colonna "template suffix" con "Default product"
-    arnette["Template Suffix"] = arnette["Template Suffix"].fillna("Default product")
+    # Template Suffix
+    arnette["Template Suffix"] = arnette["Template Suffix"].fillna("Default product") 
 
     #Salvataggio
     directory = r"C:\Users\miche\Desktop\py\Progetti\BrandScraping\test_brand2\ok\\"
 
-    salva = directory + 'arnette_ok.xlsx'
+    salva = directory + 'bale_ok.xlsx'
 
     file = arnette.to_excel(salva, index=False)
 
     print(__name__)
 
 except FileNotFoundError as err:
-    print("Non hai inserito arnette.xlsx (Arnette)")
+    print("Non hai inserito arnette.xlsx")
 
 except Exception as err:
     print(f"C'è qualcosa che non va:{err}")
