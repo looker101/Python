@@ -40,6 +40,3 @@ except FileNotFoundError as err:
 
 except Exception as err:
     print(f"C'è qualcosa che non va:{err}")
-
-
-
