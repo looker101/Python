@@ -31,8 +31,8 @@ class Teerayuth:
         return df3
 
 # i due attributi tot_ordini e spedizione  vengono assegnati ai rispettivi percorsi per l'apertura dei file
-tot_ordini = r"C:\Users\miche\Desktop\py\Progetti\Teerayuth\Dogana\Ordini.csv"
-spedizione = r"C:\Users\miche\Desktop\py\Progetti\Teerayuth\Dogana\spediti.csv"
+tot_ordini = r"C:\Users\miche\Desktop\py\GitHub\Python\Teerayuth\Dogana\Ordini.csv"
+spedizione = r"C:\Users\miche\Desktop\py\GitHub\Python\Teerayuth\Dogana\spediti.csv"
 
 file = Teerayuth(tot_ordini, spedizione) # istanza
 
