@@ -28,7 +28,7 @@ try:
     david_beckham["Template Suffix"] = david_beckham["Template Suffix"].fillna("Default product")
 
     #Salvataggio
-    directory = r"C:\Users\miche\Desktop\py\Progetti\BrandScraping\test_brand2\ok\\"
+    directory = r"C:\Users\miche\Desktop\py\GitHub\Python\catalog_price\ok\\"
 
     salva = directory + 'david_beckham_ok.xlsx'
 

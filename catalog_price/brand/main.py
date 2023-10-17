@@ -6,6 +6,7 @@ start = input("Premi INVIO per iniziare")
 import adidas_originals as originals
 import adidas_sport as sport
 import amq
+import arnette
 import balenciaga as bale
 import bottega_veneta as bottega
 import burberry as be
@@ -42,6 +43,7 @@ import vogue
 originals.file
 sport.file
 amq.file
+arnette.file
 bale.file
 be.file
 bv.file

@@ -23,7 +23,7 @@ try:
 
     alexander_mcqueen["Template Suffix"] = alexander_mcqueen["Template Suffix"].fillna("Default product")
 
-    directory = r"C:\Users\miche\Desktop\py\Progetti\BrandScraping\test_brand2\ok\\"
+    directory = r"C:\Users\miche\Desktop\py\GitHub\Python\catalog_price\ok\\"
 
     salva = directory + 'amq_ok.xlsx'
 
