@@ -33,6 +33,7 @@ try:
             compare = shopify.merge(negozi, how = "inner", on = "Barcode", suffixes = ("_Looker", "_Negozi"))
             compare.set_index("Title", inplace = True)
             compare = compare[["Barcode", "Filiale", "Variant SKU", "Q.ty_Looker", "Quantità magazzino"]]
+            # aggiungo colonna. Se i valori sono uguali ottengo TRUE altrimenti FALSE
             return compare
         
     # crezione della variabile "path" a cui assegno il percordo per aprire il file
