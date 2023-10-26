@@ -47,6 +47,6 @@ try:
     compare_at = neg.confronto()
 
     compare_at.to_excel("off_white_compare.xlsx")
-    print("File stampato nella directory!")
+    print("File salvato nella directory!")
 except Exception as e: 
     print(f"Si è verificato un errore {e}")
