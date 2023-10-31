@@ -75,4 +75,5 @@ ft.file
 ve.file
 vogue.file
 
-print("FATTO!")
+if __name__ == "__main__":
+    print("Operazione eseguita con successo!")
