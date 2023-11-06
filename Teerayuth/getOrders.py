@@ -8,6 +8,6 @@ new_file = pd.concat([tezuia, new])
 new_file.to_excel("Da_Spedire.xlsx", index=False)
 
 if new_file is not None:
-    print("Tutto ok!")
+    print("File sostituito correttamente!")
 else:
     print("Errore!! C'è qualcosa che non va")
