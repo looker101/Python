@@ -1,31 +1,44 @@
 # CON BARRA
 import pandas as pd
 
-# leggo il file
-swarovski = pd.read_excel("sk.xlsx")
+try:
+    # leggo il file
+    swarovski = pd.read_excel("sk.xlsx")
 
-# definisco la funzione per lo sconto
-def swaro(x):
-    return round(x * 0.65)
+    # definisco la funzione per lo sconto
+    def swaro(x):
+        return round(x * 0.7)
 
-# tutti i valori della colonna "Variant Price" li trasfrormo in float64
-swarovski["Variant Price"] = swarovski["Variant Price"].astype("float64")
+    # tutti i valori della colonna "Variant Price" li trasfrormo in float64
+    swarovski["Variant Price"] = swarovski["Variant Price"].astype("float64")
 
-# compilo con il valore 0 tutti i NaN della colonna del "Compare at Price"
-swarovski[["Variant Price", "Variant Compare At Price"]] = swarovski[["Variant Price", "Variant Compare At Price"]].fillna(0)
+    # compilo con il valore 0 tutti i NaN della colonna del "Compare at Price"
+    swarovski[["Variant Price", "Variant Compare At Price"]] = swarovski[["Variant Price", "Variant Compare At Price"]].fillna(0)
 
-# applico la funzione dello sconto alla colonna del "Compare Price" e compilo la colonna "Variant Price"
-swarovski["Variant Price"] = swarovski["Variant Compare At Price"].apply(swaro)
+    # applico la funzione dello sconto alla colonna del "Compare Price" e compilo la colonna "Variant Price"
+    swarovski["Variant Price"] = swarovski["Variant Compare At Price"].apply(swaro)
 
-# tolgo la barra eliminando i valori sotto la colonna "Variant compare at price"
-swarovski["Variant Compare At Price"] = ' '
+    # tolgo la barra eliminando i valori sotto la colonna "Variant compare at price"
+    #swarovski["Variant Compare At Price"] = ' '
 
-# Template Suffix
-swarovski["Template Suffix"] = swarovski["Template Suffix"].fillna("Default product") 
+    # funzione > o < di 200
+    def arrotondamento(x):
+        if x > 200:
+            return round(x, -1)
+        else:
+            return int(str(x)[:-1] + '9')
 
-#Salvataggio
-directory = r"C:\Users\miche\Desktop\py\Progetti\BrandScraping\test_brand2\ok\\"
+    # Template Suffix
+    swarovski["Template Suffix"] = swarovski["Template Suffix"].fillna("Default product") 
 
-salva = directory + 'sk_ok.xlsx'
+    #Salvataggio
+    directory = r"C:\Users\miche\Desktop\py\GitHub\Python\catalog_price\ok\\"
 
-file = swarovski.to_excel(salva, index=False)
+    salva = directory + 'sk_ok.xlsx'
+
+    file = swarovski.to_excel(salva, index=False)
+
+    print(__name__)
+
+except FileNotFoundError as err:
+    print("Non hai inserito Swarovski")
