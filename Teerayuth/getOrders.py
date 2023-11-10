@@ -5,9 +5,11 @@ new = pd.read_csv("orders_export.csv", usecols=["Name" ,"Lineitem sku", "Lineite
 
 new_file = pd.concat([tezuia, new])
 
+new_file = new_file.sort_values(by = "Name")
+
 new_file.to_excel("Da_Spedire.xlsx", index=False)
 
 if new_file is not None:
     print("File sostituito correttamente!")
 else:
-    print("Errore!! C'è qualcosa che non va")
+    print("Il file non è stato sostiuito. Ci dev'essere un errore!")
