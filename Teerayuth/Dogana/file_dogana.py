@@ -52,7 +52,10 @@ results["Price After Discount"] = results["Price Before Discount"].apply(getAfte
 # compilo tutti i valori vuoti della colonna "Currency"
 results["Currency"] = results["Currency"].fillna("EUR")
 
+# !!!!!!!!!!!!!!!INSERISCI ISTRUZIONE PER ORDINARE LE RIGHE IN BASE AL NUMERO DI ORDINE!!!!!
+
 # ordino le colonne
 results = results[["Name", "Vendor", "Lineitem sku", "Lineitem quantity", "Currency", "Price Before Discount", "Price After Discount"]]
 results.set_index("Name", inplace = True)
+results = results.sort_values(by = "Name", ascending=False)
 results.to_excel("Shipment_No_.xlsx")
