@@ -10,6 +10,6 @@ new_file = new_file.sort_values(by = "Name")
 new_file.to_excel("Da_Spedire.xlsx", index=False)
 
 if new_file is not None:
-    print("File sostituito correttamente!")
+    print("File aggiornato correttamente!")
 else:
-    print("Il file non è stato sostiuito. Ci dev'essere un errore!")
+    print("File non aggiornato a causa di un errore!")
