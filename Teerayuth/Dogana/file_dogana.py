@@ -59,3 +59,6 @@ results = results[["Name", "Vendor", "Lineitem sku", "Lineitem quantity", "Curre
 results.set_index("Name", inplace = True)
 results = results.sort_values(by = "Name", ascending=False)
 results.to_excel("Shipment_No_.xlsx")
+
+if __name__ == "__main__":
+    print("File salvato correttamente nella cartella!")
