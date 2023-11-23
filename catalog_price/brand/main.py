@@ -10,7 +10,7 @@ import arnette
 import balenciaga as bale
 import bottega_veneta as bottega
 import burberry as be
-import bvlgari as bv
+#import bvlgari as bv
 import carrera as ca
 import chiara_ferragni as ferragni
 import chloe
@@ -33,7 +33,7 @@ import rayban as rb
 import rayban_kids as rj
 import rudy_project as rudy
 import saint_laurent as sl
-#import swarovski as sk
+import swarovski as sk
 import timberland as tb
 import tom_ford as ft
 import versace as ve
@@ -46,7 +46,7 @@ amq.file
 arnette.file
 bale.file
 be.file
-bv.file
+#bv.file
 ca.file
 ferragni.file
 chloe.file
@@ -69,7 +69,7 @@ rb.file
 rj.file
 rudy.file
 sl.file
-#sk.file
+sk.file
 tb.file
 ft.file
 ve.file
