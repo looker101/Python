@@ -1,6 +1,7 @@
 import pandas as pd
 
-start = input("Premi INVIO per iniziare")
+start = input("""Benvenuto alle Cabine Suicidio! 
+              Premi INVIO per iniziare""")
 
 # importo i file dei brand
 import adidas_originals as originals
@@ -76,4 +77,4 @@ ve.file
 vogue.file
 
 if __name__ == "__main__":
-    print("Operazione eseguita con successo!")
+    print("Grazie per aver utilizzato Cabine Suicidio!!")
