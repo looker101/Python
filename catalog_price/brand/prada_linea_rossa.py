@@ -33,7 +33,10 @@ try:
 
     file = prada_linea_rossa.to_excel(salva, index=False)
 
-    print(__name__)
+    if __name__ == "__main__":
+        print("Tutto a posto")
+    else:
+        print(__name__)
 
 except FileNotFoundError as err:
     print("Non hai inserito plr.xlsx (Prada Linea Rossa)")
