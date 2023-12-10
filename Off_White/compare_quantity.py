@@ -1,5 +1,8 @@
 import pandas as pd
 
+# Shopify si riferisce al file estrpolato dal Shopify
+# negozi si rifersce al file estrapolato da Focus (quantità di pezzi nei negozi)
+
 try:
     class Off_White:
         def __init__(self, file_negozi, file_shopify):
