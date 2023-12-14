@@ -77,4 +77,4 @@ ve.file
 vogue.file
 
 if __name__ == "__main__":
-    print("Grazie per aver utilizzato Cabine Suicidio!!")
+    print("Grazie per aver utilizzato Cabine Suicidio!")
