@@ -22,10 +22,10 @@ try:
         else:
             return int(str(x)[:-1] + '9')
 
-    emporio_armani["Variant Price"] = emporio_armani["Variant Price"].ply(arrotondamento)
+    emporio_armani["Variant Price"] = emporio_armani["Variant Price"].apply(arrotondamento)
 
     # compitlo le celle vuote della colonna "Template Suffix"
-    emporio_armani["Template Suffix"] = emporio_armani["Template Suffix"].llna("Default product")
+    emporio_armani["Template Suffix"] = emporio_armani["Template Suffix"].fillna("Default product")
 
     # salvataggio
     directory = r"C:\Users\miche\Desktop\py\GitHub\Python\catalog_price\ok\\"
