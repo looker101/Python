@@ -32,7 +32,10 @@ try:
 
     file = burberry.to_excel(salva, index=False)
 
-    print(__name__)
+    if __name__ == "__main__":
+        print("burberry salvato correttamente")
+    else:
+        print(__name__)
 
 except FileNotFoundError as err:
     print("Non hai inserito burberry.xlsx")
