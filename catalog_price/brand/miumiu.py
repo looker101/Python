@@ -36,7 +36,10 @@ try:
 
     file = miumiu .to_excel(salva, index=False)
 
-    print(__name__)
+    if __name__ == "__main__":
+        print("Miu Miu salvato correttamente!")
+    else:
+        print(__name__)   
 
 except FileNotFoundError as err:
     print("Non hai inserito miumiu.xlsx (Miu Miu)")
