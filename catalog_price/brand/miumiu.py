@@ -6,7 +6,7 @@ try:
 
     # definisco la funzione per lo sconto
     def miu(x):
-        return round(x * 0.75)
+        return round(x * 0.65)
 
     # tutti i valori della colonna "Variant Price" li trasfrormo in float64
     miumiu["Variant Price"] = miumiu  ["Variant Price"].astype("float64")
